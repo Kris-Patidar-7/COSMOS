@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  background-image: -webkit-image-set(url(https://images3.alphacoders.com/124/1246127.jpg));
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.site-title {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 0 5px #8000ff, 0 0 10px #a64dff, 0 0 20px #cc80ff;
+  margin: 0;
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.bar {
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.menu-toggle.open .top-bar {
+  transform: rotate(45deg) translate(5px, 5px);
+  background-color: #cc80ff;
+}
+
+.menu-toggle.open .middle-bar {
+  opacity: 0;
+}
+
+.menu-toggle.open .bottom-bar {
+  transform: rotate(-45deg) translate(6px, -6px);
+  background-color: #cc80ff;
+}
+
+/* Slide-in Menu */
+.nav-links {
+  list-style: none;
+  padding: 50px 30px;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: auto;
+  height: 100%;
+  background: rgba(26, 26, 26, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px #8000ff44;
+  transition: left 0.7s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  z-index: 9;
+  border-right: 1px solid #8000ff88;
+}
+
+.nav-links.show {
+  left: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 5px #cc80ff88;
+}
+
+.nav-links li a:hover {
+  color: #cc80ff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #cc80ff, 0 0 20px #8000ff;
+}
+
+/* Stylish Round Button */
+.bg-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #8000ff, #cc80ff);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #8000ff88, 0 0 20px #cc80ff88;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+}
+
+.bg-toggle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #8000ffcc, 0 0 30px #cc80ffcc;
+}
+
+/* Centered URL Search Bar Styles */
+.search-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
+  z-index: 10;
+}
+
+.search-container input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.search-container input:focus {
+  box-shadow: 0 0 10px rgba(128, 0, 128, 0.5);
+}
+
+.search-container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  outline: none;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#browser-name {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom:auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #d4a5ff; /* base light purple */
+  
+  animation: glowMove 4s linear infinite;
+  text-transform: uppercase;
+}
+
+/* Moving Glow Animation */
+@keyframes glowMove {
+  0% {
+    text-shadow: 
+      0 0 5px #b43cff,
+      0 0 10px #b43cff,
+      0 0 20px #b43cff,
+      0 0 30px #7e30d5,
+      0 0 40px #7e30d5,
+      0 0 50px #7e30d5,
+      0 0 60px #7e30d5;
+  }
+  50% {
+    text-shadow: 
+      0 0 10px #d48eff,
+      0 0 20px #d48eff,
+      0 0 30px #9f5cf7,
+      0 0 40px #9f5cf7,
+      0 0 50px #9f5cf7,
+      0 0 60px #9f5cf7,
+      0 0 70px #9f5cf7;
+  }
+  100% {
+    text-shadow: 
+      0 0 5px #b43cff,
+      0 0 10px #b43cff,
+      0 0 20px #b43cff,
+      0 0 30px #7e30d5,
+      0 0 40px #7e30d5,
+      0 0 50px #7e30d5,
+      0 0 60px #7e30d5;
+  }
+}
